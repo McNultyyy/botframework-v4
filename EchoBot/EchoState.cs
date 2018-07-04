@@ -1,10 +1,14 @@
-﻿namespace EchoBot
+﻿using System.Collections.Generic;
+
+namespace EchoBot
 {
     /// <summary>
     /// Class for storing conversation state. 
     /// </summary>
-    public class EchoState
+    public class EchoState : Dictionary<string, object>
     {
-        public int TurnCount { get; set; } = 0;
+        public int? PaymentAmount { get; set; }
+        public int? CardPin { get; set; }
+        public string RecipientName { get; set; }
     }
 }
